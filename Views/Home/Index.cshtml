@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "API Home Page";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h2>API Endpoints</h2>
+        <ul>
+
+        
+            <li><strong>Get Player By ID:</strong> <a target="_blank" href="Player?id=8f22eb36-5282-407a-b6f9-f9b62e5f7318">8f22eb36-5282-407a-b6f9-f9b62e5f7318</a></li>
+            <li><strong>Get Players By ID:</strong> <a target="_blank" href="Players?ids=8f22eb36-5282-407a-b6f9-f9b62e5f7318,2fda010a-8c62-4c07-b601-4ba03f57e6af">8f22eb36-5282-407a-b6f9-f9b62e5f7318,2fda010a-8c62-4c07-b601-4ba03f57e6af</a></li>
+            <li><strong>Get Players By ID:</strong> <a target="_blank" href="Players?ids=8f22eb36-5282-407a-b6f9-f9b62e5f7318,2fda010a-8c62-4c07-b601-4ba03f57e6af">8f22eb36-5282-407a-b6f9-f9b62e5f7318,8f22eb36-5282-407a-b6f9-f9b62e5f7318</a></li>
+            <li><strong>Get Players By ID:</strong> <a target="_blank" href="Players?ids=8f22eb36-5282-407a-b6f9-f9b62e5f7318,8f22eb36-5282-407a-b6f9-f9b62e5f7318">8f22eb36-5282-407a-b6f9-f9b62e5f7318,8f22eb36-5282-407a-b6f9-f9b62e5f7318</a></li>
+            <cache>
+                <!--cache page -->
+                @{
+                    var ids = ViewBag.PlayerIds as string; //get all player ids from viewbag
+                }
+                <li><strong>Inefficient Get Players:</strong> <a target="_blank" href="/Players?ids=@ids">Long List of Players</a></li>
+            </cache>
+               
+                <li><strong>Get Latest Players:</strong> <a target="_blank" href="/Latest?ids=8f22eb36-5282-407a-b6f9-f9b62e5f7318">Latest Players</a></li>
+        </ul>
+    </div>
+</div>

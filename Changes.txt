@@ -1,0 +1,5 @@
+﻿Startup
+-----------
+1. Changed IDataProvider to Singleton as only one instance is needed
+2. Added support for DistributedMemoryCaching
+3. Added support 
